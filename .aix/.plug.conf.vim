@@ -6,8 +6,13 @@ let g:airline_skip_empty_sections = 1
 let g:airline#extensions#branch#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
 let g:airline_theme = "bubblegum"
+" let g:airline_theme = "solarized"
 " let g:airline_theme = "zenburn"
 " let g:airline_theme = "onedark"
+" let g:airline_solarized_bg='dark'
+"打开tabline功能,方便查看Buffer和切换,省去了minibufexpl插件
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 "
 "设置切换Buffer快捷键"
 nmap <C-b>n  :bnext<CR>
@@ -180,12 +185,19 @@ let g:multi_cursor_quit_key='<Esc>'
 " Vim incsearch
 let g:vim_search_pulse_disable_auto_mappings = 1
 let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 " Python snytax configure
 let python_self_cls_highlight = 1
 
 " 2 3 5 10
 " ColorFul NERDTree Settings
+let g:NERDTreeShowIgnoredStatus = 1
 let g:NERDTreeRespectWildIgnore=1
 let g:NERDTreeDirArrows=0
 let g:NERDTreeDirArrowExpandable = '▶'
@@ -264,16 +276,16 @@ let g:ctrlp_use_caching = 0
 let g:xml_syntax_folding = 1
 
 " webdevicons
-let g:webdevicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_enable_airline_statusline = 1
-let g:webdevicons_enable_airline_tabline = 1
-let g:webdevicons_enable_ctrlp = 1
-let g:WebDevIconsUnicodeDecorateFileNodes = 1
-let g:webdevicons_conceal_nerdtree_brackets = 1
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-let g:WebDevIconsOS = 'Darwin'
+" let g:webdevicons_enable = 1
+" let g:webdevicons_enable_nerdtree = 1
+" let g:webdevicons_enable_airline_statusline = 1
+" let g:webdevicons_enable_airline_tabline = 1
+" let g:webdevicons_enable_ctrlp = 1
+" let g:WebDevIconsUnicodeDecorateFileNodes = 1
+" let g:webdevicons_conceal_nerdtree_brackets = 1
+" let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
+" let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+" let g:WebDevIconsOS = 'Darwin'
 
 " scrooloose/nerdcommenter
 " Add spaces after comment delimiters by default

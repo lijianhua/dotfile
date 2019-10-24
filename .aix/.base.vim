@@ -11,7 +11,7 @@ set nocompatible
 set regexpengine=1
 
 " History
-set history=9888
+set history=9999
 
 " @ Replace <leader> key map to <space>
 let mapleader=" "

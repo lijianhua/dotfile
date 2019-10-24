@@ -182,6 +182,16 @@ set backspace=indent,eol,start
 " set list listchars=tab:▸\ ,extends:>,precedes:<
 set list listchars=tab:→\ ,extends:>,precedes:<
 
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+" Numbers
+set number
+set numberwidth=5
+highlight LineNr cterm=bold ctermfg=white
+
+
 au BufNewFile,BufRead *.vue set ft=html
 au BufNewFile,BufRead *.cubec,*.ax,*.handlebar,*.mustache,*.tpl set ft=mustache
 au BufNewFile,BufRead *.vm,*.stm set ft=velocity

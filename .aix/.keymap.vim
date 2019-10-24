@@ -69,6 +69,44 @@ endfunction
 "   nnoremap <D-5> ggVG:RetabIndent<CR>
 "   nnoremap <D-6> ggVG:Tab2Space<CR>
 " endif
+" Open a NERDTree
+map <F5> :NERDTreeToggle<CR>
+" Tagbar
+"映射tagbar的快捷键
+let g:tagbar_autofocus = 1
+let g:tagbar_width=36
+let g:tagbar_ctags_bin="/usr/local/bin/ctags"
+map <F6> :TagbarToggle<CR>
+
+map <F4> :call TitleDet()<cr>
+
+function TitleDet()
+
+    let n=1
+    while n < 10
+        let line = getline(n)
+        if line =~ '^\#\s*\S*Last\smodified\S*.*$'
+            call UpdateTitle()
+            return
+        endif
+        let n = n + 1
+    endwhile
+    call AddTitle()
+
+endfunction
+
+function AddTitle()
+
+    call append(1,"/**")
+    call append(2," * @Author  by Li Jianhua")
+    call append(3," * @Last modified: ".strftime("%Y-%m-%d %H:%M"))
+    call append(4," * @Filename     : ".expand("%:t"))
+    call append(5," *")
+    call append(6," */")
+    echohl WarningMsg | echo "Successful in adding copyright." | echohl None
+
+endf
+
 
 " Normal Key Map
 nnoremap U :redo<CR>
@@ -230,8 +268,8 @@ map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
 map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
 map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
 
-" map n <Plug>(incsearch-nohl-N)zzzv
-" map N <Plug>(incsearch-nohl-n)zzzv
+map n <Plug>(incsearch-nohl-N)
+map N <Plug>(incsearch-nohl-n)
 " map * <Plug>(incsearch-nohl-*)zzzv
 " map # <Plug>(incsearch-nohl-#)zzzv
 " map g* <Plug>(incsearch-nohl-g*)zzzv
