@@ -76,10 +76,10 @@ nnoremap Q :q!<CR>
 nnoremap W :w!<CR>
 
 " Window VertSplit switcher
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " Set as toggle foldcomment
 nnoremap zc @=((foldclosed(line('.')) < 0) ? 'zc' :'zo')<CR>
@@ -158,9 +158,6 @@ nnoremap <leader>tc :tabclose<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " Buftabline Config Manager
-nnoremap <C-k> :bnext<CR>
-nnoremap <C-j> :bprev<CR>
-nnoremap <C-x> :bdelete<CR>
 
 " Check Vim Syntax name Fn
 nnoremap <leader>yi :call <SID>SynStack()<CR>
@@ -255,7 +252,9 @@ nmap Y <Plug>(operator-flashy)$
 " nmap <Leader>py <Plug>(Prettier)
 
 " jsDoc
-nmap <silent> <C-l> <Plug>(jsdoc)
+" Gif config
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
 
 " coc
 inoremap <silent><expr> <TAB>

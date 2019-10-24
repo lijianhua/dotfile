@@ -1,14 +1,14 @@
 " @ COLOR Themes
 try
     " colorscheme ayu
-    colorscheme J
+    " colorscheme J
     " colorscheme onedark
     "colorscheme monochrome
     "colorscheme seoul256
     "colorscheme distinguished
     "colorscheme jellybeans
     "colorscheme hybrid
-    "colorscheme solarized
+    colorscheme solarized
     "colorscheme gruvbox
     "colorscheme darktango
     "colorscheme hybrid-light

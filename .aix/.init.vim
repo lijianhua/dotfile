@@ -21,8 +21,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 set nu
 set copyindent
 set preserveindent
-set tabstop=2 "4
-set shiftwidth=2 "4
+set tabstop=4 "4
+set shiftwidth=4 "4
 set softtabstop=0 "4
 " set expandtab
 set noexpandtab
@@ -176,7 +176,7 @@ set spellfile=~/.vim/spell/en.utf-8.add  " spell files added with `zg`
 set backspace=indent,eol,start
 
 " setting the tabs like that
-" set list listchars=tab:→\ ,trail:\ 
+" se list listchars=tab:→\ ,trail:\ 
 " set list listchars=tab:▸\ 
 "set list listchars=tab:-\ ,trail:\ 
 " set list listchars=tab:▸\ ,extends:>,precedes:<

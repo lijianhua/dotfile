@@ -5,12 +5,33 @@ let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 let g:airline#extensions#branch#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
-let g:airline_theme = "distinguished"
+let g:airline_theme = "bubblegum"
 " let g:airline_theme = "zenburn"
 " let g:airline_theme = "onedark"
-  
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+"
+"设置切换Buffer快捷键"
+nmap <C-b>n  :bnext<CR>
+nmap <C-b>p  :bprev<CR>
+" 关闭状态显示空白符号计数
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#symbol = '!'
+" 设置consolas字体"前面已经设置过
+"set guifont=Consolas\ for\ Powerline\ FixedD:h11
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+" old vim-powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.readonly = '⭤'
+let g:airline#extensions#tabline#fnamemod = ':t'
+nmap zl :bn<cr>
+nmap zh :bp<cr>
 " use Aix.font
 " if(has("gui"))
 "   let g:airline_left_sep='◣'
@@ -18,8 +39,8 @@ let g:airline_right_sep=''
 " endif
 
 " Set Ale Cheacker
-let g:ale_sign_error = '×'
-let g:ale_sign_warning = '*'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
 " let g:ale_virtualtext_cursor = 1
 " Set this if you want to.
 " This can be useful if you are combining ALE with
@@ -329,5 +350,26 @@ let g:context_filetype#same_filetypes.ts = 'css'
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<s-tab>'
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
+
+"ale
+"始终开启标志列
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 0
+"在vim自带的状态栏中整合ale
+let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+"显示Linter名称,出错或警告等相关信息
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+"普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
+nmap sp <Plug>(ale_previous_wrap)
+nmap sn <Plug>(ale_next_wrap)
+"<Leader>s触发/关闭语法检查
+nmap <Leader>s :ALEToggle<CR>
+"<Leader>d查看错误或警告的详细信息
+nmap <Leader>d :ALEDetail<CR>
+
+"设置状态栏显示的内容
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %{ALEGetStatusLine()}
 
 "========================= Plugin Config End =========================
