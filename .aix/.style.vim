@@ -9,6 +9,8 @@ try
     "colorscheme jellybeans
     "colorscheme hybrid
     colorscheme solarized
+    "colorscheme dracula
+    "colorscheme inkstained
     "colorscheme gruvbox
     "colorscheme darktango
     "colorscheme hybrid-light

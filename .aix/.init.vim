@@ -24,8 +24,8 @@ set preserveindent
 set tabstop=4 "4
 set shiftwidth=4 "4
 set softtabstop=0 "4
-" set expandtab
-set noexpandtab
+set expandtab
+" set noexpandtab
 " set modifiable
 
 set autowrite
@@ -84,7 +84,7 @@ set hidden
 "set autochdir
 set autoread
 "set showmatch
-set laststatus=0
+set laststatus=2
 set cmdheight=1
 set modelines=1
 
@@ -176,11 +176,12 @@ set spellfile=~/.vim/spell/en.utf-8.add  " spell files added with `zg`
 set backspace=indent,eol,start
 
 " setting the tabs like that
-" se list listchars=tab:→\ ,trail:\ 
-" set list listchars=tab:▸\ 
-"set list listchars=tab:-\ ,trail:\ 
+" se list listchars=tab:→\ ,trail:\
+" set list listchars=tab:▸\
+"set list listchars=tab:-\ ,trail:\
 " set list listchars=tab:▸\ ,extends:>,precedes:<
-set list listchars=tab:→\ ,extends:>,precedes:<
+" set list listchars=tab:→\ ,extends:>,precedes:<
+set list listchars=tab:»·,trail:·,nbsp:·
 
 " Make it obvious where 80 characters is
 set textwidth=80

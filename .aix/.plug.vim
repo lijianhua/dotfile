@@ -149,7 +149,7 @@ Plug 'pbrisbin/vim-mkdir'
 " Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json'] }
 
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'arecarn/vim-fold-cycle'
+"Plug 'arecarn/vim-fold-cycle'
 Plug 'pseewald/vim-anyfold'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'markonm/traces.vim'
@@ -164,6 +164,8 @@ Plug 'kana/vim-textobj-line'
 Plug 'DemonCloud/J'
 Plug 'joshdick/onedark.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'yuttie/inkstained-vim'
 " Plug 'morhetz/gruvbox'
 
 " Plug 'gregsexton/gitv'
@@ -181,6 +183,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
 
+Plug 'mengelbrecht/lightline-bufferline'
 " ---- Plug List Complete ----
 call plug#end()
 

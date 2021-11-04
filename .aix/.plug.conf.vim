@@ -5,7 +5,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 let g:airline#extensions#branch#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
-let g:airline_theme = "bubblegum"
+"let g:airline_theme = "bubblegum"
 " let g:airline_theme = "solarized"
 " let g:airline_theme = "zenburn"
 " let g:airline_theme = "onedark"
@@ -13,6 +13,16 @@ let g:airline_theme = "bubblegum"
 "打开tabline功能,方便查看Buffer和切换,省去了minibufexpl插件
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+let g:lightline = {
+      \ 'colorscheme': 'inkstained',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator':    { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
+      \ }
+
 "
 "设置切换Buffer快捷键"
 nmap <C-b>n  :bnext<CR>
