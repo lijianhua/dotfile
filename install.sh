@@ -58,7 +58,7 @@ fi
 
 echo "Clone Vim-Plug Plugin..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
- https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ https://github.com/lijianhua/vim-plug/master/plug.vim
 echo "Clone J ColorSheme..."
 git clone https://github.com/DemonCloud/J $HOME/.vim/bundle/J
 printf "\033[33mVim-Plug has Install && Exist\033[0m\n"
